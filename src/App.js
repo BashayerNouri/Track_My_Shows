@@ -4,6 +4,7 @@ import './App.css';
 
 //Components
 import HomePage from "./Components/HomePage";
+import TopNavBar from "./Components/TopNavBar";
 import ShowDetail from "./Components/ShowDetail";
 import EpisodeDetail from "./Components/EpisodeDetail";
 
@@ -15,6 +16,7 @@ import episodes from "./Data/episodes";
 function App() {
   return (
     <div>
+      <TopNavBar />
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route
