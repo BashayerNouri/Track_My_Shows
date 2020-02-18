@@ -1,6 +1,10 @@
 import React from "react";
 import { Accordion, Card, Button } from "react-bootstrap";
 
+//Components
+import Episodes from "./Episodes";
+
+
 function SeasonRow({ season, id }) {
   return (
     <Card>
@@ -12,11 +16,10 @@ function SeasonRow({ season, id }) {
       </Card.Header>
       <Accordion.Collapse eventKey={id}>
         <Card.Body>
-          <span>"hello"</span>
+          <Episodes episodes={season} />
         </Card.Body>
       </Accordion.Collapse>
     </Card>
   );
 }
-
 export default SeasonRow;
