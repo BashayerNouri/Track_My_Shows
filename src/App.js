@@ -5,9 +5,11 @@ import './App.css';
 //Components
 import HomePage from "./Components/HomePage";
 import ShowDetail from "./Components/ShowDetail";
+import EpisodeDetail from "./Components/EpisodeDetail";
 
 //Data
 import shows from "./Data/shows";
+import episodes from "./Data/episodes";
 
 
 function App() {
@@ -19,11 +21,13 @@ function App() {
           path="/show/:showID"
           render={props => <ShowDetail {...props} shows={shows} />}
         />
+        <Route
+          path="/episode/:episodeID"
+          render={props => <EpisodeDetail {...props} episodes={episodes} />}
+        />
         <Redirect to="/" />
       </Switch>
     </div>
   );
 }
-
-
 export default App;
