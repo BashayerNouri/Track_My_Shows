@@ -11,12 +11,19 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // Bootstrap JS
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
+import { createStore } from "redux";
+import { Provider } from "react-redux";
+import reducer from "./stores/reducer";
 
+
+const store = createStore(reducer);
 
 ReactDOM.render((
-    <BrowserRouter>
-      <App/>
-    </BrowserRouter>
+  <BrowserRouter>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </BrowserRouter>
   ), document.getElementById('root'))
 
 // If you want your app to work offline and load faster, you can change
