@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { connect } from "react-redux";
 
 //Components
 import ShowsList from "./ShowsList";
@@ -26,16 +25,11 @@ class HomePage extends Component {
         <div className="container-responsive">
         <div className="col-12">
           <SearchBar filterShows={this.filterShows} />
-          <ShowsList shows={this.props.shows} filteredShows={this.state.filteredShows} />
+          <ShowsList filteredShows={this.state.filteredShows} />
         </div>
       </div>
     );
   }
 }
-const mapStateToProps = state => {
-  return {
-    shows: state.shows
-  };
-};
 
-export default connect(mapStateToProps)(HomePage);
+export default (HomePage);
