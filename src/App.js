@@ -1,10 +1,10 @@
 import React from 'react';
 import { Switch, Route, Redirect } from "react-router-dom";
-import './App.css';
 
 //Components
 import HomePage from "./Components/HomePage";
 import TopNavBar from "./Components/TopNavBar";
+import Footer from "./Components/Footer";
 import ShowDetail from "./Components/ShowDetail";
 import EpisodeDetail from "./Components/EpisodeDetail";
 
@@ -29,6 +29,7 @@ function App() {
         />
         <Redirect to="/" />
       </Switch>
+      <Footer />
     </div>
   );
 }

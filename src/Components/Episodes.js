@@ -2,8 +2,8 @@ import React from "react";
 import { Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-function Episodes(props) {
-  let episodesRows = props.episodes.map((episode, i) => (
+function Episodes({ episodes }) {
+  let episodesRows = episodes.map((episode, i) => (
     <tr key={episode.id}>
       <td>
         <Link to={`/episode/${episode.id}`}>{`Episode ${++i}: ${
@@ -18,4 +18,5 @@ function Episodes(props) {
     </Table>
   );
 }
+
 export default Episodes;
